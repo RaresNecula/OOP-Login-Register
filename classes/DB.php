@@ -87,8 +87,8 @@ class DB {
 
             $sql = "INSERT INTO users (`" . implode('`, `' , $keys) . "`) VALUES ({$values})";
 
-            if($this->query($sql, $fields)->error()) {
-            // if(!$this->query($sql, $fields)->error()) {
+            if(!$this->query($sql, $fields)->error()) {
+            // not pentru exceptia de 'There was a problem creating yoru account'
                 return true;
             }
             return false;
