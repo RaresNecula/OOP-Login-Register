@@ -11,4 +11,8 @@ class User {
             throw new Exception('There was a problem creating an account.');
         }
     }
+
+    public function login($username = null, $password = null) {
+        
+    }
 }
