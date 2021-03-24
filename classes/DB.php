@@ -88,6 +88,7 @@ class DB {
             $sql = "INSERT INTO users (`" . implode('`, `' , $keys) . "`) VALUES ({$values})";
 
             if($this->query($sql, $fields)->error()) {
+            // if(!$this->query($sql, $fields)->error()) {
                 return true;
             }
             return false;

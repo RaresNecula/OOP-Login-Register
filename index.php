@@ -18,8 +18,6 @@ require_once 'core/init.php';
 // )
 // );
 
-$user = DB::getInstance()->update('users', 3, array(
-    'password' => 'newpassword',
-    'name' => 'Ovidiu Morosan'
-    
-));
+if (Session::exists('home')) {
+    echo '<p>' . Session::flash('home') . '</p>';
+}
